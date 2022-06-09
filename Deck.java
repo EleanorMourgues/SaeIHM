@@ -14,9 +14,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 
- * @author Idrissi Mohammed
- *
+ * permet la création d'un deck de cartes
+ * @author Idrissi Mohammed, Eléanor Mourgues, Charlie Sarrato-Boudet
  */
 
 public class Deck {
@@ -80,8 +79,8 @@ public class Deck {
     }
 	
 	/**
-	 * m�thode toString pour le deck
-	 * @return le deck sous forme de chaine de caract�res
+	 * méthode toString pour le deck
+	 * @return le deck sous forme de chaine de caractères
 	 */
 	public String toString() {
 	    String chaine;
