@@ -1,5 +1,5 @@
 /*
- * Classe permettant de gérer une partie d'Hanabi
+ * Classe permettant de gÃ©rer une partie d'Hanabi
  * gestionPartie.java                                                    05/22
  */
 package code;
@@ -53,26 +53,77 @@ public class gestionPartie {
 			 new HanabiCarte(Couleur.blanc,Valeur.cinq)},
 	};
 	
-	HanabiCarte carteMilieu[][] = new HanabiCarte[5][5];
-		
 	static Joueur[] listeJoueur = {
-			new Joueur("joueur1"),
-			new Joueur("joueur2"),
-			new Joueur("joueur3"),
+			new Joueur("joueur 1"),
+			new Joueur("joueur 2"),
+			new Joueur("joueur 3"),
 	};
+	
 	static Deck deck = new Deck();
+	
 	static Joueur joueurActuel = listeJoueur[0];
+	
+	//creation defausse
 	static ArrayList<HanabiCarte> defausse = new ArrayList<HanabiCarte>();
 	
 	public static void main(String[] args) {
 		
+		//distribution des carte
 		for (int i = 0; i < 5; i++) {
-			joueurActuel.main.add(i, deck.getCarte(0));
-			deck.supprimerCarte(i);
+			joueurActuel.main.add(deck.getCarte(i));
 		}
-		defausse.add(joueurActuel.defausser());
-
-		System.out.println(defausse.get(0));
-	}
+			
+		joueurActuel = listeJoueur[1];
+		
+		for (int i = 0; i < 5; i++) {
+			joueurActuel.main.add(deck.getCarte(i));
+		}
+		
+		joueurActuel = listeJoueur[2];
+		
+		for (int i = 0; i < 5; i++) {
+			joueurActuel.main.add(deck.getCarte(i));
+		}
+		
+		//creation des jeton
+		int jetonbleu = 7;
+		int jetonrouge = 3;
+		
+		int action;
+		
+		//centre de la table vide
+		 HanabiCarte[][] CENTRE_TABLE = new HanabiCarte [5][5];
+		 HanabiCarte[] centretablerouge = CENTRE_TABLE[0];
+		 HanabiCarte[] centretablebleu = CENTRE_TABLE[1];
+		 HanabiCarte[] centretablerose = CENTRE_TABLE[2];
+		 HanabiCarte[] centretablevert = CENTRE_TABLE[3];
+		 HanabiCarte[] centretableblanc = CENTRE_TABLE[4];
+		 
+		 
+		 
+		 //debut de la partie (condition fin de la partie)
+		 //while (jetonrouge <= 3 || deck.size() == 0) {
+		 
+		 //afficher les carte pour le joueur 1
+		 joueurActuel = listeJoueur[1];
+		 System.out.println("Joueur 2: " + joueurActuel.toStringMain());
+		 
+		 joueurActuel = listeJoueur[2];
+		 System.out.println("Joueur 3: " + joueurActuel.toStringMain());
+		 
+		 //differente action
+		 Scanner entree = new Scanner(System.in);
+		 do {
+				System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
+				action = entree.nextInt();
+			} while (action < 1 && action > 4);
+		 
+		 
 	
+	//	 }
+	
+	
+	
+	
+	}
 }
