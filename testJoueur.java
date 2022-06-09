@@ -17,11 +17,11 @@ import code.Joueur;
 
 /** 
  * Tests unitaires de {@link code.Joueur}
- * @author Mourgues Eléanor
+ * @author Mourgues ElÃ©anor
  */
 public class testJoueur {
 	
-	 /** Jeux de tests utiles pour tester plusieurs méthodes */
+	 /** Jeux de tests utiles pour tester plusieurs mÃ©thodes */
 	 public static Joueur[] aTester = {
 		       new Joueur("Mike"),
 		       new Joueur("Terminator666"),
@@ -29,7 +29,7 @@ public class testJoueur {
 		    };
 	 
 	 /**
-	 * TODO commenter le rôle du champ
+	 * TODO commenter le rÃ´le du champ
 	 */
 	public static Joueur[] aModifier = {
 		       new Joueur("Mike"),
@@ -44,8 +44,8 @@ public class testJoueur {
 	
 	
 	/** 
-     * Lancement des méthodes de tests avec vérification des échecs
-     * @param args non utilisé
+     * Lancement des mÃ©thodes de tests avec vÃ©rification des Ã©checs
+     * @param args non utilisÃ©
      */
     public static void main(String[] args) {
     	boolean ok;
@@ -56,30 +56,30 @@ public class testJoueur {
     	    deck.supprimerCarte(0);
     	}
   	
-//    	ok = testJoueur();
-//    	ok &= testGetNom();
-//    	ok &= testSetNom();
-//    	
-//    	if (ok) {
-//            System.out.println("tests réussis");
-//        } else {
-//            System.err.println("tests getNom échoue");
-//        }
+    	ok = testJoueur();
+    	ok &= testGetNom();
+   	ok &= testSetNom();
+    	
+    	if (ok) {
+            System.out.println("tests rÃ©ussis");
+        } else {
+            System.err.println("tests getNom Ã©choue");
+        }
     	
     	Joueur.indice();
     	
     	
     	System.out.println(JoueurActuel.toStringMain());
-//     	JoueurActuel.poser();
-//    	JoueurActuel.defausser();
-//    	JoueurActuel.ordonner();
+     	JoueurActuel.poser();
+    	JoueurActuel.defausser();
+    	JoueurActuel.ordonner();
     	System.out.println(JoueurActuel.toStringMain());
     	
     	
     }
 
     /**
-     * tests visant à vérifier qu le constructeur d'un joueur est opérationnel
+     * tests visant Ã  vÃ©rifier qu le constructeur d'un joueur est opÃ©rationnel
      * @return true si le test est bon false sinon
      */
 	private static boolean testJoueur() {
@@ -102,8 +102,8 @@ public class testJoueur {
 	}
 	
 	/**
-	 * test de la méthode getNom()
-	 * @return true si les noms attendus correspondent aux noms récupéré par le guetter
+	 * test de la mÃ©thode getNom()
+	 * @return true si les noms attendus correspondent aux noms rÃ©cupÃ©rÃ© par le guetter
 	 */
 	private static boolean testGetNom() {
         
@@ -122,8 +122,8 @@ public class testJoueur {
     }
 	
 	/**
-	 * test de la méthode SetNom()
-	 * @return true si les noms attendus correspondent aux noms modifiés par le setter
+	 * test de la mÃ©thode SetNom()
+	 * @return true si les noms attendus correspondent aux noms modifiÃ©s par le setter
 	 */
 	private static boolean testSetNom() {
 		 boolean ok;
@@ -142,7 +142,7 @@ public class testJoueur {
 	}
 	
 
-	/* les méthode suivantes ont été tester à la main à cause de la présence d'un scanner */
+	/* les mÃ©thode suivantes ont Ã©tÃ© tester Ã  la main Ã  cause de la prÃ©sence d'un scanner */
 	/* indice () */
 	/* poser() */
 	/* defausser() */
