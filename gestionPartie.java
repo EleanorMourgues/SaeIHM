@@ -65,19 +65,22 @@ public class gestionPartie {
         
         /* distribution des cartes */
         for (int i = 0; i < 5; i++) {
-            joueurActuel.main.add(deck.getCarte(i));
+            joueurActuel.main.add(deck.getCarte(0));
+            deck.supprimerCarte(0);
         }
             
         joueurActuel = listeJoueur[1];
         
         for (int i = 0; i < 5; i++) {
-            joueurActuel.main.add(deck.getCarte(i));
+            joueurActuel.main.add(deck.getCarte(0));
+            deck.supprimerCarte(0);
         }
         
         joueurActuel = listeJoueur[2];
         
         for (int i = 0; i < 5; i++) {
-            joueurActuel.main.add(deck.getCarte(i));
+            joueurActuel.main.add(deck.getCarte(0));
+            deck.supprimerCarte(0);
         }
         
          
