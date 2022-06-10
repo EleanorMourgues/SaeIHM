@@ -63,7 +63,7 @@ public class gestionPartie {
         
         Joueur joueurActuel = listeJoueur[0];
         
-        /* distribution des carte */
+        /* distribution des cartes */
         for (int i = 0; i < 5; i++) {
             joueurActuel.main.add(deck.getCarte(i));
         }
