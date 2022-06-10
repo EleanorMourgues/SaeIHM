@@ -17,7 +17,7 @@ import code.Joueur;
 
 /** 
  * Tests unitaires de {@link code.Joueur}
- * @author Mourgues Eléanor
+ * @author Idrissi Mohammed, Eléanor Mourgues, Charlie Sarrato-Boudet
  */
 public class testJoueur {
 	
