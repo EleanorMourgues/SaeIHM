@@ -25,13 +25,13 @@ public class gestionPartie {
             new Joueur("joueur 3"),
     };
     
-    //creation des jeton
+    /* creation des jeton */
     static int jetonBleu = 7;
     static int jetonRouge = 3;
     
     static Deck deck = new Deck();
     
-    //centre de la table vide
+    /* centre de la table vide */
     static HanabiCarte[] centreTableRouge = new HanabiCarte [5];
     static HanabiCarte[] centreTableBleu = new HanabiCarte [5];
     static HanabiCarte[] centreTableRose = new HanabiCarte [5];
@@ -39,7 +39,7 @@ public class gestionPartie {
     static HanabiCarte[] centreTableBlanc = new HanabiCarte [5];
     
     
-    //creation defausse
+    /* creation d'une defausse */
     static ArrayList<HanabiCarte> defausse = new ArrayList<HanabiCarte>();
     
     public static void main(String[] args) {
@@ -50,6 +50,7 @@ public class gestionPartie {
         
         Scanner entree = new Scanner(System.in);
         
+        /* les joueurs saisissent leur pseudo */
         System.out.println("Joueur 1 saisissez votre pseudo (pas d'espace !) : ");
         nom = entree.next();
         listeJoueur[0].setNom(nom);
@@ -62,7 +63,7 @@ public class gestionPartie {
         
         Joueur joueurActuel = listeJoueur[0];
         
-        //distribution des carte
+        /* distribution des carte */
         for (int i = 0; i < 5; i++) {
             joueurActuel.main.add(deck.getCarte(i));
         }
@@ -84,13 +85,14 @@ public class gestionPartie {
         
             /* tour du joueur 1 */
             joueurActuel = listeJoueur[0];
+            System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            //afficher les carte pour le joueur 1
+            /* afficher les carte pour le joueur 1 */
             System.out.println("Joueur 2: " + listeJoueur[1].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
              
-            //differentes actions
+            /* differentes actions */
     
             do {
                 System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
@@ -120,8 +122,9 @@ public class gestionPartie {
             
             /* tour du joueur 2 */
             joueurActuel = listeJoueur[1];
+            System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            //afficher les carte pour le joueur 2
+            /* afficher les carte pour le joueur 2 */
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
@@ -156,8 +159,9 @@ public class gestionPartie {
             
             /* tour du joueur 3 */
             joueurActuel = listeJoueur[2];
+            System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            //afficher les carte pour le joueur 3
+            /* afficher les carte pour le joueur 3 */
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[1].toStringMain());
