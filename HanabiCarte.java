@@ -5,8 +5,8 @@
 package carte;
 
 /**
- * 
- * @author Idrissi Mohammed
+ * Permet de créer une carte du jeu hanabi
+ * @author Idrissi Mohammed, Eléanor Mourgues, Charlie Sarrato-Boudet
  *
  */
 
