@@ -17,7 +17,7 @@ import java.util.Scanner;
 /**
  * 
  * 
- *
+ * @author Idrissi Mohammed, Eléanor Mourgues, Charlie Sarrato-Boudet
  */
 public class gestionPartie {
 	
