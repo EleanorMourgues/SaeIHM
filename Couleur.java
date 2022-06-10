@@ -4,6 +4,9 @@
 
 package carte;
 
+/**
+ * Enumeration des couleurs des cartes
+ */
 public enum Couleur {
 	rouge, 
 	bleu, 
