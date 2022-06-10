@@ -6,11 +6,15 @@ package tests;
 
 import carte.Deck;
 
+/**
+ * Tests unitaires de {@link carte.Deck}
+ * @author Idrissi Mohammed, El√©anor Mourgues, Charlie Sarrato-Boudet
+ */
 public class testDeck {
 
     /** 
-     * Lancement des mÈthodes de tests de Deck avec vÈrification des Èchecs
-     * @param args non utilisÈ
+     * Lancement des m√©thodes de tests de Deck avec v√©rification des √©checs
+     * @param args non utilis√©
      */
     public static void main(String[] args) {
         
