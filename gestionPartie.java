@@ -98,6 +98,15 @@ public class gestionPartie {
                 System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
                 action = entree.nextInt();
             } while (action < 1 && action > 4 );
+            
+            if (jetonBleu == 0 && action == 1) {
+                System.out.println("\nVous ne pouvez plus donner d'indice car vous n'avez plus de jetons bleus disponible" 
+                                   + "\nVeuillez refaire un choix");
+                do {
+                    System.out.print("2: poser / 3: defausser / 4: re-ordonner :");
+                    action = entree.nextInt();
+                } while (action < 2 && action > 4 );
+            }
              
             switch (action) {
              
@@ -126,7 +135,7 @@ public class gestionPartie {
             joueurActuel = listeJoueur[1];
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            //afficher les carte pour le joueur 2
+            /* afficher les carte pour le joueur 2 */
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
@@ -136,6 +145,15 @@ public class gestionPartie {
                 System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
                 action = entree.nextInt();
             } while (action < 1 && action > 4 );
+            
+            if (jetonBleu == 0 && action == 1) {
+                System.out.println("\nVous ne pouvez plus donner d'indice car vous n'avez plus de jetons bleus disponible" 
+                                   + "\nVeuillez refaire un choix");
+                do {
+                    System.out.print("2: poser / 3: defausser / 4: re-ordonner :");
+                    action = entree.nextInt();
+                } while (action < 2 && action > 4 );
+            }
              
             switch (action) {
              
@@ -165,7 +183,7 @@ public class gestionPartie {
             joueurActuel = listeJoueur[2];
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            //afficher les carte pour le joueur 3
+            /* afficher les carte pour le joueur 3 */
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[1].toStringMain());
@@ -175,6 +193,15 @@ public class gestionPartie {
                 System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
                 action = entree.nextInt();
             } while (action < 1 && action > 4 );
+            
+            if (jetonBleu == 0 && action == 1) {
+                System.out.println("\nVous ne pouvez plus donner d'indice car vous n'avez plus de jetons bleus disponible" 
+                                   + "\nVeuillez refaire un choix");
+                do {
+                    System.out.print("2: poser / 3: defausser / 4: re-ordonner :");
+                    action = entree.nextInt();
+                } while (action < 2 && action > 4 );
+            }
              
             switch (action) {
              
