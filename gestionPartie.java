@@ -80,48 +80,117 @@ public class gestionPartie {
         }
         
          
-        joueurActuel = listeJoueur[0];
-         
-        //debut de la partie (condition fin de la partie)
-        //while (jetonrouge <= 3 || deck.size() == 0) {
-         
-        //afficher les carte pour le joueur 1
-        System.out.println("Joueur 2: " + listeJoueur[1].toStringMain());
-         
-        System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
-         
-        //differente action
-
         do {
-            System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
-            action = entree.nextInt();
-        } while (action < 1 && action > 4 );
-         
-        switch (action) {
-         
-        case 1 :
-            joueurActuel.indice();
+        
+            /* tour du joueur 1 */
+            joueurActuel = listeJoueur[0];
              
-        case 2 :
-            cartePosee = joueurActuel.poser();
-            if(!(verifier(cartePosee))) {
-                jetonRouge --;
-                System.out.println("Vous avez perdue une vie ! \nLa carte que vous avez posé est déjà présente sur le centre");
+            //afficher les carte pour le joueur 1
+            System.out.println("Joueur 2: " + listeJoueur[1].toStringMain());
+             
+            System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
+             
+            //differentes actions
+    
+            do {
+                System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
+                action = entree.nextInt();
+            } while (action < 1 && action > 4 );
+             
+            switch (action) {
+             
+            case 1 :
+                joueurActuel.indice();
+                 
+            case 2 :
+                cartePosee = joueurActuel.poser();
+                if(!(verifier(cartePosee))) {
+                    jetonRouge --;
+                    System.out.println("Vous avez perdue une vie ! \nLa carte que vous avez posé est déjà présente sur le centre");
+                    defausse.add(cartePosee);
+                }
+              
+            case 3 :
+                cartePosee = joueurActuel.defausser();
                 defausse.add(cartePosee);
+                 
+            case 4 :
+                joueurActuel.ordonner();
             }
-          
-        case 3 :
-            cartePosee = joueurActuel.defausser();
-            defausse.add(cartePosee);
+            
+            /* tour du joueur 2 */
+            joueurActuel = listeJoueur[1];
              
-        case 4 :
-            joueurActuel.ordonner();
-        }
-         
+            //afficher les carte pour le joueur 2
+            System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
+             
+            System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
+             
     
-    //  }
+            do {
+                System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
+                action = entree.nextInt();
+            } while (action < 1 && action > 4 );
+             
+            switch (action) {
+             
+            case 1 :
+                joueurActuel.indice();
+                 
+            case 2 :
+                cartePosee = joueurActuel.poser();
+                if(!(verifier(cartePosee))) {
+                    jetonRouge --;
+                    System.out.println("Vous avez perdue une vie ! \nLa carte que vous avez posé est déjà présente sur le centre");
+                    defausse.add(cartePosee);
+                }
+              
+            case 3 :
+                cartePosee = joueurActuel.defausser();
+                defausse.add(cartePosee);
+                 
+            case 4 :
+                joueurActuel.ordonner();
+            }
+             
+            
+            /* tour du joueur 3 */
+            joueurActuel = listeJoueur[2];
+             
+            //afficher les carte pour le joueur 3
+            System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
+             
+            System.out.println("Joueur 3: " + listeJoueur[1].toStringMain());
+             
     
+            do {
+                System.out.print("1: indice / 2: poser / 3: defausser / 4: re-ordonner :");
+                action = entree.nextInt();
+            } while (action < 1 && action > 4 );
+             
+            switch (action) {
+             
+            case 1 :
+                joueurActuel.indice();
+                 
+            case 2 :
+                cartePosee = joueurActuel.poser();
+                if(!(verifier(cartePosee))) {
+                    jetonRouge --;
+                    System.out.println("Vous avez perdue une vie ! \nLa carte que vous avez posé est déjà présente sur le centre");
+                    defausse.add(cartePosee);
+                }
+              
+            case 3 :
+                cartePosee = joueurActuel.defausser();
+                defausse.add(cartePosee);
+                 
+            case 4 :
+                joueurActuel.ordonner();
+            }
     
+        } while (jetonRouge == 0 || deck.size() == 0 || (centreTableBleu[5] != null && centreTableBlanc[5] != null 
+                                                         && centreTableRose[5] != null && centreTableRouge[5] != null && centreTableVert[5] != null ));
     
     
     }
