@@ -88,9 +88,9 @@ public class gestionPartie {
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
             /* afficher les carte pour le joueur 1 */
-            System.out.println("Joueur 2: " + listeJoueur[1].toStringMain());
+            System.out.println(listeJoueur[1].getNom() + " : " + listeJoueur[1].toStringMain());
              
-            System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
+            System.out.println(listeJoueur[2].getNom() + " : " + listeJoueur[2].toStringMain());
              
             /* differentes actions */
     
@@ -136,9 +136,9 @@ public class gestionPartie {
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
             /* afficher les carte pour le joueur 2 */
-            System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
+            System.out.println(listeJoueur[0].getNom() + " : " + listeJoueur[0].toStringMain());
              
-            System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
+            System.out.println(listeJoueur[2].getNom() + " : " + listeJoueur[2].toStringMain());
              
     
             do {
@@ -184,9 +184,9 @@ public class gestionPartie {
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
             /* afficher les carte pour le joueur 3 */
-            System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
+            System.out.println(listeJoueur[0].getNom() + " : " + listeJoueur[0].toStringMain());
              
-            System.out.println("Joueur 3: " + listeJoueur[1].toStringMain());
+            System.out.println(listeJoueur[1].getNom() + " : " + listeJoueur[1].toStringMain());
              
     
             do {
