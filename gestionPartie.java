@@ -26,7 +26,7 @@ public class gestionPartie {
     };
     
     /* creation des jeton */
-    static int jetonBleu = 7;
+    static int jetonBleu = 8;
     static int jetonRouge = 3;
     
     static Deck deck = new Deck();
