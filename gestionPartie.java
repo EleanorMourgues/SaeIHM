@@ -64,20 +64,25 @@ public class gestionPartie {
         Joueur joueurActuel = listeJoueur[0];
         
         /* distribution des cartes */
+        System.out.println(deck.toString());
+        /*
+         * problème : lorsqu'on affiche la mains de chaque joueur ils ont les mêmes cartes 
+         * pourtant le deck, lui, supprime les cartes au fur et à mesure de la distribution
+         */
         for (int i = 0; i < 5; i++) {
             joueurActuel.main.add(deck.getCarte(0));
             deck.supprimerCarte(0);
         }
             
         joueurActuel = listeJoueur[1];
-        
+        System.out.println(deck.toString());
         for (int i = 0; i < 5; i++) {
             joueurActuel.main.add(deck.getCarte(0));
             deck.supprimerCarte(0);
         }
         
         joueurActuel = listeJoueur[2];
-        
+        System.out.println(deck.toString());
         for (int i = 0; i < 5; i++) {
             joueurActuel.main.add(deck.getCarte(0));
             deck.supprimerCarte(0);
