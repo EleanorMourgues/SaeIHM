@@ -103,6 +103,7 @@ public class gestionPartie {
              
             case 1 :
                 joueurActuel.indice();
+                jetonBleu --;
                  
             case 2 :
                 cartePosee = joueurActuel.poser();
@@ -115,7 +116,8 @@ public class gestionPartie {
             case 3 :
                 cartePosee = joueurActuel.defausser();
                 defausse.add(cartePosee);
-                 
+                jetonBleu ++; 
+                
             case 4 :
                 joueurActuel.ordonner();
             }
@@ -124,7 +126,7 @@ public class gestionPartie {
             joueurActuel = listeJoueur[1];
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            /* afficher les carte pour le joueur 2 */
+            //afficher les carte pour le joueur 2
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[2].toStringMain());
@@ -139,6 +141,7 @@ public class gestionPartie {
              
             case 1 :
                 joueurActuel.indice();
+                jetonBleu --;
                  
             case 2 :
                 cartePosee = joueurActuel.poser();
@@ -151,7 +154,8 @@ public class gestionPartie {
             case 3 :
                 cartePosee = joueurActuel.defausser();
                 defausse.add(cartePosee);
-                 
+                jetonBleu ++; 
+                
             case 4 :
                 joueurActuel.ordonner();
             }
@@ -161,7 +165,7 @@ public class gestionPartie {
             joueurActuel = listeJoueur[2];
             System.out.println("C'est au tour de " + joueurActuel.getNom());
              
-            /* afficher les carte pour le joueur 3 */
+            //afficher les carte pour le joueur 3
             System.out.println("Joueur 1: " + listeJoueur[0].toStringMain());
              
             System.out.println("Joueur 3: " + listeJoueur[1].toStringMain());
@@ -176,6 +180,7 @@ public class gestionPartie {
              
             case 1 :
                 joueurActuel.indice();
+                jetonBleu --;
                  
             case 2 :
                 cartePosee = joueurActuel.poser();
@@ -188,6 +193,7 @@ public class gestionPartie {
             case 3 :
                 cartePosee = joueurActuel.defausser();
                 defausse.add(cartePosee);
+                jetonBleu ++;
                  
             case 4 :
                 joueurActuel.ordonner();
