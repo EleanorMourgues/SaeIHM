@@ -46,7 +46,7 @@ public class Menu {
                                + "pouvez choisir entre poser une "
                                + "carte au centre de la table, "
                                + "donner un indice a un autre joueur "
-                               + "en lui inidiquant toutes les carte "
+                               + "en lui indiquant toutes les cartes "
                                + "d'une couleur ou toutes les cartes "
                                + "d'une valeur ou bien défausser une carte "
                                + "c'est-a-dire s'en debarrasser. De plus "
