@@ -208,82 +208,97 @@ public class gestionPartie {
         valeur = carte.getValeur();
         carteOK = false;
         
+        /* on compare la couleur de la carte avec celles possibles */
         if (couleur.equals(Couleur.blanc)) {
-            if (!(valeur.equals(centreTableBlanc[0])) && !(valeur.equals(centreTableBlanc[1])) 
-		&& !(valeur.equals(centreTableBlanc[2])) && !(valeur.equals(centreTableBlanc[3])) ) {
+            
+            /* on regarde si la carte n'est pas déjà présente au centre */
+            if (!(valeur.equals(centreTableBlanc[0].getValeur())) && !(valeur.equals(centreTableBlanc[1].getValeur())) 
+                && !(valeur.equals(centreTableBlanc[2].getValeur())) && !(valeur.equals(centreTableBlanc[3].getValeur())) ) {
+                
+                /* on pose la carte à l'emplacement prévu à la condition que les cartes précédentes soient présentes au centre */
                 if (valeur.equals(Valeur.un)) {
                     centreTableBlanc[0] = carte;
-                } else if (valeur.equals(Valeur.deux)) {
+                } else if (valeur.equals(Valeur.deux) && centreTableBlanc[0] != null) {
                     centreTableBlanc[1] = carte;
-                } else if (valeur.equals(Valeur.trois)) {
+                } else if (valeur.equals(Valeur.trois ) && centreTableBlanc[0] != null && centreTableBlanc[1] != null) {
                     centreTableBlanc[2] = carte;
-                } else if (valeur.equals(Valeur.quatre)) {
+                } else if (valeur.equals(Valeur.quatre) && centreTableBlanc[0] != null && centreTableBlanc[1] != null 
+                                                        && centreTableBlanc[2] != null) {
                     centreTableBlanc[3] = carte;   
-                } else {
+                } else if (valeur.equals(Valeur.cinq) && centreTableBlanc[0] != null && centreTableBlanc[1] != null 
+                                                      && centreTableBlanc[2] != null && centreTableBlanc[3] != null) {
                     centreTableBlanc[4] = carte;
                 }
                 carteOK = true;
             }
         } else if (couleur.equals(Couleur.bleu)) {
-            if (!(valeur.equals(centreTableBleu[0])) && !(valeur.equals(centreTableBleu[1])) 
-		&& !(valeur.equals(centreTableBleu[2])) && !(valeur.equals(centreTableBleu[3])) ) {
+            if (!(valeur.equals(centreTableBleu[0].getValeur())) && !(valeur.equals(centreTableBleu[1].getValeur())) 
+                && !(valeur.equals(centreTableBleu[2].getValeur())) && !(valeur.equals(centreTableBleu[3].getValeur())) ) {
                 if (valeur.equals(Valeur.un)) {
                     centreTableBleu[0] = carte;
-                } else if (valeur.equals(Valeur.deux)) {
+                } else if (valeur.equals(Valeur.deux) && centreTableBleu[0] != null) {
                     centreTableBleu[1] = carte;
-                } else if (valeur.equals(Valeur.trois)) {
+                } else if (valeur.equals(Valeur.trois ) && centreTableBleu[0] != null && centreTableBleu[1] != null) {
                     centreTableBleu[2] = carte;
-                } else if (valeur.equals(Valeur.quatre)) {
+                } else if (valeur.equals(Valeur.quatre) && centreTableBleu[0] != null && centreTableBleu[1] != null 
+                                                        && centreTableBleu[2] != null) {
                     centreTableBleu[3] = carte;   
-                } else {
+                } else if (valeur.equals(Valeur.cinq) && centreTableBleu[0] != null && centreTableBleu[1] != null 
+                                                      && centreTableBleu[2] != null && centreTableBleu[3] != null) {
                     centreTableBleu[4] = carte;
                 }
                 carteOK = true;
             }
         }  else if (couleur.equals(Couleur.rose)) {
-            if (!(valeur.equals(centreTableRose[0])) && !(valeur.equals(centreTableRose[1])) 
-		&& !(valeur.equals(centreTableRose[2])) && !(valeur.equals(centreTableRose[3])) ) {
+            if (!(valeur.equals(centreTableRose[0].getValeur())) && !(valeur.equals(centreTableRose[1].getValeur())) 
+                && !(valeur.equals(centreTableRose[2].getValeur())) && !(valeur.equals(centreTableRose[3].getValeur())) ) {
                 if (valeur.equals(Valeur.un)) {
                     centreTableRose[0] = carte;
-                } else if (valeur.equals(Valeur.deux)) {
+                } else if (valeur.equals(Valeur.deux) && centreTableRose[0] != null) {
                     centreTableRose[1] = carte;
-                } else if (valeur.equals(Valeur.trois)) {
+                } else if (valeur.equals(Valeur.trois ) && centreTableRose[0] != null && centreTableRose[1] != null) {
                     centreTableRose[2] = carte;
-                } else if (valeur.equals(Valeur.quatre)) {
+                } else if (valeur.equals(Valeur.quatre) && centreTableRose[0] != null && centreTableRose[1] != null 
+                                                        && centreTableRose[2] != null) {
                     centreTableRose[3] = carte;   
-                } else {
+                } else if (valeur.equals(Valeur.cinq) && centreTableRose[0] != null && centreTableRose[1] != null 
+                                                      && centreTableRose[2] != null && centreTableRose[3] != null) {
                     centreTableRose[4] = carte;
                 }
                 carteOK = true;
             }
         }  else if (couleur.equals(Couleur.rouge)) {
-            if (!(valeur.equals(centreTableRouge[0])) && !(valeur.equals(centreTableRouge[1])) 
-		&& !(valeur.equals(centreTableRouge[2])) && !(valeur.equals(centreTableRouge[3])) ) {
+            if (!(valeur.equals(centreTableRouge[0].getValeur())) && !(valeur.equals(centreTableRouge[1].getValeur())) 
+                && !(valeur.equals(centreTableRouge[2].getValeur())) && !(valeur.equals(centreTableRouge[3].getValeur())) ) {
                 if (valeur.equals(Valeur.un)) {
                     centreTableRouge[0] = carte;
-                } else if (valeur.equals(Valeur.deux)) {
+                } else if (valeur.equals(Valeur.deux) && centreTableRouge[0] != null) {
                     centreTableRouge[1] = carte;
-                } else if (valeur.equals(Valeur.trois)) {
+                } else if (valeur.equals(Valeur.trois ) && centreTableRouge[0] != null && centreTableRouge[1] != null) {
                     centreTableRouge[2] = carte;
-                } else if (valeur.equals(Valeur.quatre)) {
+                } else if (valeur.equals(Valeur.quatre) && centreTableRouge[0] != null && centreTableRouge[1] != null 
+                                                        && centreTableRouge[2] != null) {
                     centreTableRouge[3] = carte;   
-                } else {
+                } else if (valeur.equals(Valeur.cinq) && centreTableRouge[0] != null && centreTableRouge[1] != null 
+                                                      && centreTableRouge[2] != null && centreTableRouge[3] != null) {
                     centreTableRouge[4] = carte;
                 }
                 carteOK = true;
             }
         }  else {
-            if (!(valeur.equals(centreTableVert[0])) && !(valeur.equals(centreTableVert[1])) 
-		&& !(valeur.equals(centreTableVert[2])) && !(valeur.equals(centreTableVert[3])) ) {
+            if (!(valeur.equals(centreTableVert[0].getValeur())) && !(valeur.equals(centreTableVert[1].getValeur())) 
+                && !(valeur.equals(centreTableVert[2].getValeur())) && !(valeur.equals(centreTableVert[3].getValeur())) ) {
                 if (valeur.equals(Valeur.un)) {
                     centreTableVert[0] = carte;
-                } else if (valeur.equals(Valeur.deux)) {
+                } else if (valeur.equals(Valeur.deux) && centreTableVert[0] != null) {
                     centreTableVert[1] = carte;
-                } else if (valeur.equals(Valeur.trois)) {
+                } else if (valeur.equals(Valeur.trois ) && centreTableVert[0] != null && centreTableVert[1] != null) {
                     centreTableVert[2] = carte;
-                } else if (valeur.equals(Valeur.quatre)) {
+                } else if (valeur.equals(Valeur.quatre) && centreTableVert[0] != null && centreTableVert[1] != null 
+                                                        && centreTableVert[2] != null) {
                     centreTableVert[3] = carte;   
-                } else {
+                } else if (valeur.equals(Valeur.cinq) && centreTableVert[0] != null && centreTableVert[1] != null 
+                                                      && centreTableVert[2] != null && centreTableVert[3] != null) {
                     centreTableVert[4] = carte;
                 }
                 carteOK = true;
@@ -294,3 +309,4 @@ public class gestionPartie {
     }
     
 }
+
