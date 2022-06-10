@@ -1,5 +1,5 @@
 /*
- * Classe permettant de créer un joueur
+ * Classe permettant de crÃ©er un joueur
  * Joueur.java                                                    05/22
  */
 
@@ -15,9 +15,9 @@ import code.gestionPartie;
 import java.util.Collections;
 
 /**
- * Classe permettant de créer un joueur 
- * mais également contenant des méthode qui lui sont propres
- * @author Mourgues Eléanor
+ * Classe permettant de crÃ©er un joueur 
+ * mais Ã©galement contenant des mÃ©thode qui lui sont propres
+ * @author Idrissi Mohammed, ElÃ©anor Mourgues, Charlie Sarrato-Boudet
  * @version 1.0   
  */
 public class Joueur {
@@ -26,15 +26,15 @@ public class Joueur {
 	public static List<HanabiCarte> main = new ArrayList<HanabiCarte>(5);
 	
 
-	/* nom donné par le joueur */
+	/* nom donnÃ© par le joueur */
 	public String nom;
 	
 	/**
-	 * Définition des caractéristiques d'un joueur
-	 * @param nom nom donné par le joueur
+	 * DÃ©finition des caractÃ©ristiques d'un joueur
+	 * @param nom nom donnÃ© par le joueur
 	 */
 	public Joueur(String nom) {
-		/* contrôler la validité du nom */
+		/* contrÃ´ler la validitÃ© du nom */
 		if (nom == null || nom.isBlank()) {
 			throw new IllegalArgumentException("nom invalide");
 	    }
@@ -68,19 +68,19 @@ public class Joueur {
 		Scanner entree = new Scanner(System.in);
 		
 		do {
-		    System.out.print("Vous désirez donnez un indice à quel joueur ? ");
+		    System.out.print("Vous dÃ©sirez donnez un indice Ã  quel joueur ? ");
 		    joueurSelectionne = entree.next();
 		} while (!(joueurSelectionne.equals(gestionPartie.listeJoueur[0].getNom())) 
 		         && !(joueurSelectionne.equals(gestionPartie.listeJoueur[1].getNom())) 
 		         && !(joueurSelectionne.equals(gestionPartie.listeJoueur[2].getNom())));
 		    
 		do {
-			System.out.print("Vous désirez donnez un indice sur la couleur ou le chiffre ? (écrivez en minuscule !) ");
+			System.out.print("Vous dÃ©sirez donnez un indice sur la couleur ou le chiffre ? (Ã©crivez en minuscule !) ");
 			typeIndice = entree.next();
 		} while (!(typeIndice.equals(COULEUR)) && !(typeIndice.equals(CHIFFRE)));
 		
 		do {
-			System.out.print("Combien de cartes sont concernées par cet indice ? (1 à 5) ");
+			System.out.print("Combien de cartes sont concernÃ©es par cet indice ? (1 Ã  5) ");
 			NbCarte = entree.nextInt();
 		} while (NbCarte != 1 && NbCarte != 2 && NbCarte != 3 && NbCarte != 4 && NbCarte != 5);
 		
@@ -91,14 +91,14 @@ public class Joueur {
 		for (int i = 0 ; i < IndiceCarte.length ; i++) {
 			
 			do {
-				System.out.print("Indiquez une carte que vous voulez designer (carte numéroté de gauche à droite de 1 à 5) : ");
+				System.out.print("Indiquez une carte que vous voulez designer (carte numÃ©rotÃ© de gauche Ã  droite de 1 Ã  5) : ");
 				IndiceCarte[i] = entree.nextInt();
 				indice += IndiceCarte[i] + ", ";
 			} while (IndiceCarte[i] < 1 && IndiceCarte[i] > 5);		
 		}
 		if (typeIndice.equals(COULEUR)) {
 			do {
-				System.out.print("Indiquer quel couleur vous voulez indiquer (écrivez en minuscule !) : ");
+				System.out.print("Indiquer quel couleur vous voulez indiquer (Ã©crivez en minuscule !) : ");
 				IndiceCouleur = entree.next();
 			} while (!(IndiceCouleur.equals("rouge")) && !(IndiceCouleur.equals("bleu")) && !(IndiceCouleur.equals("blanc")) && !(IndiceCouleur.equals("rose")) && !(IndiceCouleur.equals("vert")));
             indice = indice.substring(0, indice.length()-1);
@@ -106,7 +106,7 @@ public class Joueur {
             indice += " sont de couleur " + IndiceCouleur;
 		} else {
 			do {
-				System.out.print("Indiquer quel chiffre vous voulez indiquer (1 à 5) : ");
+				System.out.print("Indiquer quel chiffre vous voulez indiquer (1 Ã  5) : ");
 				IndiceChiffre = entree.nextInt();
 			} while (IndiceChiffre != 1 && IndiceChiffre != 2 && IndiceChiffre != 3 && IndiceChiffre != 4 && IndiceChiffre != 5);
 			indice = indice.substring(0, indice.length()-1);
@@ -139,8 +139,8 @@ public class Joueur {
 	
 	
 	/** 
-	 * permet au joueur de défausser une carte
-	 * @return c la carte défaussée
+	 * permet au joueur de dÃ©fausser une carte
+	 * @return c la carte dÃ©faussÃ©e
 	 */
 	public static HanabiCarte defausser() {
 		int carteChoisie;
@@ -152,7 +152,7 @@ public class Joueur {
 		} while (carteChoisie < 0 || carteChoisie > 5);
 		carteChoisie --;
 		c = main.get(carteChoisie);
-		System.out.println("Vous avez défausser la carte : " + main.get(carteChoisie).toStringCarte());
+		System.out.println("Vous avez dÃ©fausser la carte : " + main.get(carteChoisie).toStringCarte());
 		main.remove(carteChoisie);
 		main.add(gestionPartie.deck.getCarte(0));   // on prend une carte de la pioche
 		gestionPartie.deck.supprimerCarte(0);       // on supprime la carte de la pioche
@@ -163,7 +163,7 @@ public class Joueur {
 
 	/**
 	 * permet au joueur d'ordonner ses cartes
-	 * @return la main du joueur après modification
+	 * @return la main du joueur aprÃ¨s modification
 	 */
 	public static List<HanabiCarte> ordonner() {
 	    int carte1;
@@ -174,7 +174,7 @@ public class Joueur {
 	        carte1 = entree.nextInt();
 	    } while (carte1 < 0 || carte1 > 5);
 	    do {
-	        System.out.print("choisir la deuxième carte a permuter entrez un chiffre entre 1 et 5 :");
+	        System.out.print("choisir la deuxiÃ¨me carte a permuter entrez un chiffre entre 1 et 5 :");
 	        carte2 = entree.nextInt();
 	    } while (carte2 < 0 || carte2 > 5);
 	    System.out.println("Vous avez interchanger la carte " + main.get(carte1 - 1).toStringCarte() + " avec la carte " + main.get(carte2 - 1).toStringCarte());
@@ -184,7 +184,7 @@ public class Joueur {
 	}
     
     /**
-     * permet de récupérer la main d'un joueur
+     * permet de rÃ©cupÃ©rer la main d'un joueur
      * @return main du joueur
      */
     public List<HanabiCarte> getMain() {
@@ -192,8 +192,8 @@ public class Joueur {
     }
     
     /**
-     * permet de récupérer la main d'un joueur sous forme de chaine de caractère
-     * @return main du joueur sous forme de chaine de caractères
+     * permet de rÃ©cupÃ©rer la main d'un joueur sous forme de chaine de caractÃ¨re
+     * @return main du joueur sous forme de chaine de caractÃ¨res
      */
     public String toStringMain() {
         String chaine = "";
