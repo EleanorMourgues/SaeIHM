@@ -25,7 +25,7 @@ public class gestionPartie {
             new Joueur("joueur 3"),
     };
     
-    /* creation des jeton */
+    /* creation des jetons */
     static int jetonBleu = 8;
     static int jetonRouge = 3;
     
